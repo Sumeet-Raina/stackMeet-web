@@ -32,6 +32,7 @@ const Connections = () => {
       {connections.map((connection) => {
         const { _id, firstName, lastName, photoUrl, about, age, gender } =
           connection;
+
         return (
           <div
             key={_id}
