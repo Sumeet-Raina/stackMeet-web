@@ -7,17 +7,16 @@ import UserCard from "./UserCard";
 
 const Feed = () => {
   const feed = useSelector((store) => store.feed);
-
   const dispatch = useDispatch();
 
   const getFeed = async () => {
-    if (feed.length > 0) return;
+    if (feed) return;
 
     try {
       const res = await axios.get(BASE_URL + "/feed", {
         withCredentials: true,
       });
-      dispatch(addFeed(res?.data.data));
+      dispatch(addFeed(res?.data?.data));
     } catch (err) {
       console.error(err);
     }
@@ -27,6 +26,9 @@ const Feed = () => {
     getFeed();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+  if (!feed) return;
+  if (feed.length <= 0)
+    return <h1 className="flex justify-center my-10">No new users found</h1>;
 
   return (
     feed && (
