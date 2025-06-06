@@ -36,3 +36,7 @@ npm install
 ```bash
 npm run dev
 ```
+![Screenshot 2025-06-06 at 12 33 45](https://github.com/user-attachments/assets/869c69a3-26ec-4063-b528-68301782122d)
+
+
+
