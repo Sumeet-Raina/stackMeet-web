@@ -75,7 +75,7 @@ const Requests = () => {
               </button>
               <button
                 className="btn btn-secondary mx-2"
-                onClick={reviewRequest("accepted", request._id)}
+                onClick={reviewRequest(() => "accepted", request._id)}
               >
                 Accept
               </button>
