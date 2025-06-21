@@ -21,7 +21,7 @@ Configure security group to allow port 22 (SSH) and port 80 (HTTP) access.
 3. Set permissions on the .pem file
 
 ```
-chmod 400 devTinder-secret.pem
+chmod 400 stackmeet-secret.pem
 ```
 
 Ensures the .pem file is secure (read-only by the user).
